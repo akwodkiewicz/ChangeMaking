@@ -1,0 +1,33 @@
+
+Uzupe³niæ metody
+
+static int? NoLimitsDynamic(int amount, int[] coins, out int[] change)
+static int? Dynamic(int amount, int[] coins, int[] limits, out int[] change)
+
+rozwiazuj¹ce problem wydawania reszty minimaln¹ liczb¹ monet
+odpowiednio bez ograniczeñ na liczbê monet danego nomina³u i z takimi ograniczeniami.
+
+Opis parametrów i wyniklu znajduje siê w pliku ChangeMaking.cs
+
+Wskazowka (do wersji z limitami):
+U¿yæ tablicy prostok¹tnej do pamiêtania optymalnej liczby monet dla danego podzadania
+- w komórce [i,j] pamiêtaæ rozwi¹zanie dla i monet oraz kwoty j
+- tablicê wype³niaæ wierszami
+  . zwiêkszenie numeru wiersza to uwzglêdnienie kolejnego rodzaju monety w rozwi¹zaniu
+  . zwiêkszenie numeru kolumny to zwiêkszenie kwoty reszty
+- mo¿e byæ potrzebna jeszcze trzecia pêtla
+- mo¿e te¿ przydaæ siê druga tablica o analogicznej strukturze
+
+Punktacja
+
+Czêœæ 1 - bez limitów
+  - 1.0  -  tylko liczba monet (wartoœæ zwracana funkcji)
+  - 1.5  -  pe³ne rozwi¹zanie (wartoœæ zwracana i parametr change)
+
+Czêœæ 2 - z limitami
+  - 2.0  -  tylko liczba monet (wartoœæ zwracana funkcji)
+  - 2.5  -  pe³ne rozwi¹zanie (wartoœæ zwracana i parametr change)
+
+Kara za z³amanie ograniczenia na z³ozonoœæ pamiêciow¹ (podanego w pliku ChangeMaking.cs):
+   po -0.5 pkt za ka¿d¹ metodê.
+
